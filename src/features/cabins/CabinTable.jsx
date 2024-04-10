@@ -31,7 +31,7 @@ const TableHeader = styled.header`
 function CabinTable() {
   // useQuery(tanstack query library) to fetch table on supabase from
   const { isLoading, data: cabins, error } = useQuery({
-    queryKey: ["cabin"],
+    queryKey: ["cabins"],
     queryFn: getCabins,
   })
   if (isLoading) return <Spinner />
