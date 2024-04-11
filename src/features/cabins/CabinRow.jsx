@@ -45,7 +45,9 @@ function CabinRow({ cabin }) {
   const { id: cabinId, name, maxCapacity, regularPrice, discount, image } = cabin
   const queryClient = useQueryClient()
   const { isLoading: isDeleting, mutate } = useMutation({
+    // This is how to import function with the useMutation hook * Don't forget to import it + useQueryClient for invalidation *
     mutationFn: deleteCabin,
+    // Upon successful mutation
     onSuccess: () => {
       toast.success('Cabin successfully deleted')
       // invalidateQueries refetch data which will render instantly in the component
