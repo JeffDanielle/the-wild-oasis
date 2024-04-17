@@ -6,14 +6,13 @@ export async function signup({ fullName, email, password }) {
         password,
         options: {
             data: {
-                full_name: fullName,
+                fullName: fullName,
                 avatar: "",
             }
         }
     });
 
     if (error) throw new Error(error.message);
-
     return data;
 }
 
