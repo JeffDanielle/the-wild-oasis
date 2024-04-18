@@ -23,7 +23,8 @@ const queryClient = new QueryClient({
     queries: {
       /* How long it takes data to become stale
        (every update on data it will reflect depends on staleTime without using the api request or refreshing the page) */
-      staleTime: 60 * 1000,
+      // staleTime: 60 * 1000,
+      staleTime: 0,
     }
   }
 })
